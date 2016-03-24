@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F0D1445-287C-4938-B0AD-3D5BE74656A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hepsi.Extensions.UnitTests</RootNamespace>
+    <AssemblyName>Hepsi.Extensions.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentAssertions">
+      <HintPath>..\..\..\packages\FluentAssertions.4.0.1\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions.Core">
+      <HintPath>..\..\..\packages\FluentAssertions.4.0.1\lib\net45\FluentAssertions.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DummyDocument.cs" />
+    <Compile Include="DummyInnerPropertyDocument.cs" />
+    <Compile Include="DummyPropertyDocument.cs" />
+    <Compile Include="IQueryableExtensions\When_filtering_an_iqueryable\and_at_least_a_result_exists.cs" />
+    <Compile Include="IQueryableExtensions\When_filtering_an_iqueryable\and_no_result_exits.cs" />
+    <Compile Include="IQueryableExtensions\When_filtering_an_iqueryable\with_a_filter_whose_field_doesnt_exist.cs" />
+    <Compile Include="IQueryableExtensions\When_filtering_an_iqueryable\with_a_list_of_filters.cs" />
+    <Compile Include="IQueryableExtensions\When_ordering_an_iqueryable\and_property_does_not_exist.cs" />
+    <Compile Include="IQueryableExtensions\When_ordering_an_iqueryable\ascendingly.cs" />
+    <Compile Include="IQueryableExtensions\When_ordering_an_iqueryable\ascendingly_and_then_by_another_property.cs" />
+    <Compile Include="IQueryableExtensions\When_ordering_an_iqueryable\descendingly.cs" />
+    <Compile Include="IQueryableExtensions\When_ordering_an_iqueryable\descendingly_and_then_by_descendingly.cs" />
+    <Compile Include="IQueryableExtensions\When_ordering_an_iqueryable\For_complex_types\and_depth_is_more_than_one.cs" />
+    <Compile Include="IQueryableExtensions\When_ordering_an_iqueryable\For_complex_types\and_depth_is_one.cs" />
+    <Compile Include="IQueryableExtensions\When_ordering_an_iqueryable\For_complex_types\descendingly_and_then_by_descendingly.cs" />
+    <Compile Include="IQueryableExtensions\When_ordering_an_iqueryable\with_direction_and_property_name_instead_of_order_by_request.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Hepsi.Extensions\Hepsi.Extensions.csproj">
+      <Project>{40b5464a-c35d-4a1d-bad9-22083c59ff87}</Project>
+      <Name>Hepsi.Extensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

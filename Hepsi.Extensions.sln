@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hepsi.Extensions", "src\Hepsi.Extensions\Hepsi.Extensions.csproj", "{40B5464A-C35D-4A1D-BAD9-22083C59FF87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hepsi.Extensions.UnitTests", "src\tests\Hepsi.Extensions.UnitTests\Hepsi.Extensions.UnitTests.csproj", "{9F0D1445-287C-4938-B0AD-3D5BE74656A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6ACD170A-57BB-423B-9F69-3144419B56E2}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40B5464A-C35D-4A1D-BAD9-22083C59FF87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B5464A-C35D-4A1D-BAD9-22083C59FF87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B5464A-C35D-4A1D-BAD9-22083C59FF87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B5464A-C35D-4A1D-BAD9-22083C59FF87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F0D1445-287C-4938-B0AD-3D5BE74656A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F0D1445-287C-4938-B0AD-3D5BE74656A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0D1445-287C-4938-B0AD-3D5BE74656A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0D1445-287C-4938-B0AD-3D5BE74656A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

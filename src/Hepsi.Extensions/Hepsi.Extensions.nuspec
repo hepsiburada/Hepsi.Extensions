@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Hepsiburada.Extensions</id>
+    <version>0.0.0.0</version>
+    <title>Hepsiburada Extensions</title>
+    <authors>hepsiburada.com (https://github.com/hepsiburada)</authors>
+    <licenseUrl>https://raw.githubusercontent.com/hepsiburada/Hepsi.Extensions/master/licence.txt</licenseUrl>
+    <iconUrl>http://a2.mzstatic.com/us/r30/Purple3/v4/70/b4/61/70b461b7-7eb8-4437-92a0-9e8c68ff681f/icon175x175.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>IQueryable extensions created by Hepsiburada developers</description>
+    <copyright>Copyright (c) hepsiburada.com</copyright>
+    <tags>IQueryable Extension Hepsiburada OrderBy DynamicOrderBy DynamicFilterBy Filter</tags>
+    <dependencies></dependencies>
+  </metadata>
+    <files>
+    <file src="..\build\Hepsi.Extensions.dll" target="lib\net45" />
+  </files>
+</package>
